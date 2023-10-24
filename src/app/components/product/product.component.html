@@ -1,0 +1,11 @@
+<section class="grid items-center justify-center py-5">
+  <ng-container *ngIf="product">
+    <h2 class="font-mono md:text-xl pt-5" >{{product.title}}</h2>
+    <p class="font-mono md:text-xl py-5">S/{{product.price}}</p>
+    <img [ngSrc]="product.images[0]" alt="" width="380" height="480" draggable="false"/>
+</ng-container>
+</section>
+
+<ng-container *ngIf="!product">
+  Product no Renderizado
+</ng-container>
